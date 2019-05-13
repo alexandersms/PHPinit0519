@@ -1,7 +1,7 @@
 <?php 
     include ("header.php");
 ?>
-
+    <section class="container">
         <h1>Ma page</h1>
 
         <p>
@@ -172,7 +172,7 @@
         </p>
 
 
-
+    </section>
 
 
 
