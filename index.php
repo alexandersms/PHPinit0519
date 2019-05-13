@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-    </head>
-    <body>
+<?php 
+    include ("header.php");
+?>
+
         <h1>Ma page</h1>
 
         <p>
@@ -114,10 +109,81 @@
                     echo "<p>La temperature est trop chaude</p>";
                 }
 
-                
+                // Les boucle
+                /* Objectif : créer une liste à puces (10 puces)*/
+
+                echo "<ul>";
+                    $i = 1;
+                    while ($i <= 10) {
+                        echo "<li>Puce $i</li>";
+                        $i++;
+                    }
+                echo "</ul>";
+
+                echo "<ul>";
+
+                    for ($i=0; $i < 10; $i++) { 
+                        echo "<li>Puce $i</li>";
+                    }
+
+                echo "</ul>";
+
+                // Tableau indexé
+                    $fruits = ["Banane", "Pomme", "Citron", "Kiwi"];
+
+                    echo "<ul>";
+
+                        foreach ($fruits as $fruit) {
+                            echo "<li>$fruit</li>";
+                        }
+                    echo "</ul>";
+
+                $people = [
+                    "Nom" => "Simisi",
+                    "Prenom" => "Alex",
+                    "age" => 30
+                ];
 
             ?>
 
+            <table>
+                <thead>
+                    <tr>
+                        <?php 
+                            foreach ($people as $key => $value) {
+                                echo "<td>$key</td>";
+                            }
+                        
+                        ?>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <?php 
+                            foreach ($people as $value) {
+                                echo "<td>$value</td>";
+                            }
+                        
+                        ?>
+                    </tr>
+                </tbody>
+            </table>
+
         </p>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </body>
 </html>
