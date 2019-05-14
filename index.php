@@ -1,5 +1,5 @@
 <?php 
-    include ("header.php");
+    require ("inc/header.php");
 ?>
     <section class="container">
         <h1>Ma page</h1>
@@ -175,15 +175,13 @@
     </section>
 
 
+    <?php 
+    require ("inc/footer.php");
+?>
 
 
 
 
 
 
-
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    </body>
-</html>
+    
